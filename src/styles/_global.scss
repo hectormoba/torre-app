@@ -1,0 +1,29 @@
+@use './variables';
+
+//RESETS
+.body {
+  margin: 0;
+}
+
+//---- GLOBAL CLASSES AND PROPERTIES
+
+:root {
+  font-family: "Muli", "Helvetica", "Arial", sans-serif;
+}
+
+.xl-heading-size {
+  @include font-sizing(24px, 500, normal, 28px);
+}
+
+.l-heading-size {
+  @include font-sizing(20px, 600, 0.005em, 24px);
+}
+
+.m-heading-size {
+  @include font-sizing(14px, 600, 0.005em, 16px);
+}
+
+.text-heading-size {
+  @include font-sizing(12px, 600, normal, 24px);
+  text-transform: uppercase;
+}

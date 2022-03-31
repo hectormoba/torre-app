@@ -1,0 +1,36 @@
+//---- FONT
+
+@font-face {
+  font-family: "Muli";
+  src: url("../assets/muli.regular.ttf") format("truetype");
+}
+
+//---- COLORS
+//primary
+$primary-actions-color: #0052cc;
+$body-text-color: #172b4d;
+$background-color: #ffffff;
+
+//secondary
+$success-action-color: #36b37e;
+$accent-color: #00b8d9;
+$accent-variant-color: #4c9aff;
+
+//neutrals
+$dark-neutral-color: #253858;
+$mid-neutral-color: #6b778c;
+$ligth-neutral-color: #ebecf0;
+
+//---- SIZES
+
+$font-size: 14px;
+$objet-align: 8px;
+
+// MIXINS
+
+@mixin font-sizing($font-size, $font-weight, $letter-spacing, $line-height) {
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  font-size: $font-size;
+  line-height: $line-height;
+}
