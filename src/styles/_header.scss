@@ -1,0 +1,6 @@
+@use './variables';
+
+.header {
+  justify-content: space-between;
+  padding: $object-align;
+}

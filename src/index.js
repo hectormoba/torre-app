@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import App from './App';
 import "./styles/main.scss"
-
-function App(props) {
-  return <h1 className="test">Hello, project!</h1>
-}
 
 const node = document.getElementById("root")
 ReactDOM.render(<App />, node)

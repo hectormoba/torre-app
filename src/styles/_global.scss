@@ -27,3 +27,7 @@
   @include font-sizing(12px, 600, normal, 24px);
   text-transform: uppercase;
 }
+
+.flex {
+  display: flex;
+}
