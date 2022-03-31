@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Magnifier from '../../assets/magnifier.png' 
 
 export default function Header(props){
+  const [ imageClick, setImageClick] = useState(false);
+  let form = "form display-none";
+
+  const hadleImageClick = () => {
+    setImageClick(!imageClick)
+  }
+
+  if(imageClick) {
+    form = "form flex"
+  } else {
+    form = "form  display-none"
+  }
+
   return(
-    <header className="header flex">
-      <div className="size-container">
-        <h1 className="logo xl-heading-size">Torre</h1>
-        <nav className="menu flex">
+    <header className="header size-container flex">
+      <h1 className="logo xl-heading-size">Torre</h1>
+      <nav className="menu flex">
+        <form className={form}>
           <input className="input" type="search"></input>
-          {/* added span for styling icon search */}
-          <span className="input__search-icon"></span>
           <button className="menu__button">Search</button>
-        </nav>
-      </div>
+        </form>
+        <img className="input__search-icon" src={Magnifier} alt="magnifier" onClick={hadleImageClick}/>
+      </nav>
     </header>
   )
 }

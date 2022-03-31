@@ -1,14 +1,33 @@
 @use './variables';
 
 //RESETS
-.body {
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
 }
 
 //---- GLOBAL CLASSES AND PROPERTIES
 
 :root {
   font-family: "Muli", "Helvetica", "Arial", sans-serif;
+  color: $body-text-color;
 }
 
 .xl-heading-size {
@@ -28,6 +47,22 @@
   text-transform: uppercase;
 }
 
+.size-container {
+  @media (min-width: 300px) {
+    max-width: $mobile-max-width;
+  }
+  @media (min-width: 650px) {
+    max-width: $tablet-max-width;
+  }
+  @media (min-width: 898px) {
+    max-width: $desktop-max-width;
+  }
+}
+
 .flex {
   display: flex;
+}
+
+.display-none {
+  display: none;
 }

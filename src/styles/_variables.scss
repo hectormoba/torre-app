@@ -20,11 +20,16 @@ $accent-variant-color: #4c9aff;
 $dark-neutral-color: #253858;
 $mid-neutral-color: #6b778c;
 $ligth-neutral-color: #ebecf0;
+$max-light-neutral-color: #fafbfc;
 
 //---- SIZES
 
 $object-align: 8px;
 $font-size: 14px;
+
+$mobile-max-width: 370px;
+$tablet-max-width: 550px;
+$desktop-max-width: 900px;
 
 // MIXINS
 
@@ -33,4 +38,13 @@ $font-size: 14px;
   letter-spacing: $letter-spacing;
   font-size: $font-size;
   line-height: $line-height;
+}
+
+@mixin card {
+  background-color: $ligth-neutral-color;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 28px 0;
+  // $ligth-neutral-color to rgba for transparency
+  box-shadow: 10px 15px 45px 14px rgba(235, 236, 240, 0.8);
 }

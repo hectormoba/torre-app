@@ -1,6 +1,32 @@
 @use './variables';
 
 .header {
+  max-height: 10vh;
+  width: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: $object-align;
+}
+
+.logo {
+  margin: 0;
+}
+
+.form {
+  height: fit-content;
+}
+
+.input {
+  border-color: $mid-neutral-color;
+  border-radius: $object-align;
+  margin-right: $object-align;
+  min-height: 34px;
+}
+
+.menu__button {
+  border: 1px solid transparent;
+  padding: calc($object-align / 2);
+  border-radius: $object-align;
+  background-color: $primary-actions-color;
+  color: $background-color;
 }

@@ -1,0 +1,13 @@
+@use "./variables";
+
+.skills {
+  @include card;
+}
+
+.skills__pill {
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 45px;
+  background-color: $accent-variant-color;
+  color: $background-color;
+}
