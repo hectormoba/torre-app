@@ -1,18 +1,18 @@
 import React, { useEffect, useState, Fragment } from "react";
 
-let obj = {
-  master: [],
-  expert: [],
-  proficient: [],
-  novice: [],
-  "no-experience-interested": []
-}
 
 export default function Skills(props){
-  const { user } = props;
+  const { user, name } = props;
   const [skills, setSkills] = useState({});
 
   useEffect(() => {
+    let obj = {
+      master: [],
+      expert: [],
+      proficient: [],
+      novice: [],
+      "no-experience-interested": []
+    }
     if(user.strengths !== undefined) {
       let map = user.strengths;
       map.forEach(element => {
@@ -22,7 +22,7 @@ export default function Skills(props){
       });
       setSkills(obj)
     }
-  },[user.strengths])
+  },[user.strengths, name])
 
   return (
     <section className="size-container skills">

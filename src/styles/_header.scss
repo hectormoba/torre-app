@@ -20,12 +20,13 @@
   border-color: $mid-neutral-color;
   border-radius: $object-align;
   margin-right: $object-align;
-  min-height: 34px;
+  min-height: 28px;
 }
 
 .menu__button {
   border: 1px solid transparent;
   padding: calc($object-align / 2);
+  margin-right: $object-align;
   border-radius: $object-align;
   background-color: $primary-actions-color;
   color: $background-color;

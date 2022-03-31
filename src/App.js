@@ -10,17 +10,18 @@ import Skills from './components/skills/Skills'
 
 export default function App(props){
  const [user, setUser] = useState({});
+ const [name , setName] = useState("torrenegra")
 
   useEffect(() => {
-    getUserBio("https://bio.torre.co/api/bios","torrenegra", setUser);
-  }, [])
+    getUserBio("https://bio.torre.co/api/bios", name, setUser);
+  }, [name])
 
   return(
     <Fragment>
-      <Header />
+      <Header changeName={setName} />
       <main>
         <Avatar user={user} />
-        <Skills user={user} />
+        <Skills user={user} name={name} />
       </main>
     </Fragment>
   )
