@@ -32,13 +32,10 @@ module.exports = {
     })
    ],
   resolve:{
-    alias: {
-      '@': path.join(__dirname, 'src/')
-    },
     extensions: ['*','.js', '.jsx'],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
     clean: true
   },
